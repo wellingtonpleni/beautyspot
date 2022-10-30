@@ -3,6 +3,8 @@ import React from 'react';
 import BottomSheet from 'reanimated-bottom-sheet';
 import { ScrollView, Dimensions } from 'react-native';
 import ModalHeader from './header';
+import Resume from './resume';
+import DateTime from './dateTime';
 
 const ModalAgendamento = () => {
     return (
@@ -12,6 +14,8 @@ const ModalAgendamento = () => {
             renderContent={() => (
                 <ScrollView style={{backgroundColor: "#FFF", height: "100%"}}>
                     <ModalHeader />
+                    <Resume />
+                    <DateTime />
                 </ScrollView>
             )}/>
     );

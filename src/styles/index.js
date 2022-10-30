@@ -38,7 +38,7 @@ export const Touchable = styled.TouchableOpacity`
     padding: ${(props) => (props.hasPadding ? '20px' : '0px')};
     margin: ${(props) => props.spacing || 0};
     background: ${(props) => theme.colors[props.background] || props.background || 'transparent'};
-    border-radius: ${(props) => props.radius || 0};
+    border-radius: ${(props) => props.rounded || 0};
     border: ${(props) => props.border || 'none'};
 `
 
