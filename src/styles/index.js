@@ -53,6 +53,7 @@ export const Cover = styled.ImageBackground.attrs((props) => ({
     border-radius: ${(props) => (props.circle ? props.width: '3px')};
     border: ${(props) => props.border || 'none'};
     background-color: ${theme.colors.muted};
+    overflow: hidden;
 `;
 
 export const GradientView = styled(LinearGradient).attrs((props) => {
