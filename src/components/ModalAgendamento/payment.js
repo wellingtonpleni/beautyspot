@@ -30,11 +30,16 @@ const PaymentPicker = () => {
                                 width: 20,
                                 height: 10,
                                 marginRight: 10,
+                                marginLeft: 10,
                             }}
                         />
                         <Text small>5643 **** **** **** 8976</Text>
                     </Box>
-                    <Icon name="cog-outline" color={theme.colors.muted} size={20} />
+                    <Icon name="cog-outline" color={theme.colors.muted} size={20}
+                        style={{
+                            marginRight:10,
+                        }}
+                    />
                 </Touchable>
             </View>
         </>

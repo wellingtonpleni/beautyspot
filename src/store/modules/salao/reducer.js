@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import types from "./types";
 import produce from 'immer';
 import consts from '../../../consts';
@@ -25,6 +26,13 @@ const INITIAL_STATE = {
 
 function salao(state = INITIAL_STATE, action) {
      switch(action.type) {
+
+        case types.UPDATE_SALAO: {
+            return produce(state, (draft) => {
+                draft.salao = {...draft.salao, ...action.salao};
+            });
+        }
+
         default: return state;
      }
 }

@@ -17,17 +17,17 @@ const EspecialistasModal = () => {
                     <Text small>Disponíveis em 29/10/2022 (Dom) às 14:30h</Text>
                     <Box wrap="wrap" spacing="10px 0 0">
                         {[1,2,3,4,5,6,7,8,9,10].map(colaborador => (
-                            <Touchable 
-                                height="70px" 
+                            <Touchable
+                                height="70px"
                                 spacing="10px 0 0 0"
                                 direction="column"
                                 align="center"
                                 width={(Dimensions.get("screen").width - 100) / 4}
                             >
                                 <Cover 
-                                    width="45px" 
-                                    height="45px" 
-                                    circle 
+                                    width="45px"
+                                    height="45px"
+                                    circle
                                     spacing="0 0 5px 0"
                                     border={colaborador === 1 ? `2px solid ${theme.colors.primary}` : 'none'}
                                     image="https://cdn.eutotal.com/imagens/chanel-de-bico.jpg"

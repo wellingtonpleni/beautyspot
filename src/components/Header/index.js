@@ -15,7 +15,12 @@ import {
 import Icon from 'react-native-vector-icons/FontAwesome';
 import theme from '../../styles/theme.json';
 
+import { useSelector } from 'react-redux';
+
 const Header = () => {
+
+    const {salao} = useSelector(state => state.salao);
+
     return (
         <>
             <Cover
@@ -34,8 +39,8 @@ const Header = () => {
                 </GradientView>
             </Cover>
             <Box 
-                background="light" 
-                align="center" 
+                background="light"
+                align="center"
                >
                 <Box hasPadding justify="space-between">
                     <Touchable width="50px" direction="column" align="center">
@@ -54,9 +59,9 @@ const Header = () => {
                     </Touchable>
                 </Box>
                 <Box hasPadding direction="column" align="center" justify="center">
-                    <Button 
+                    <Button
                         icon="clock-check-outline"
-                        background="success"
+                        background="primary"
                         mode="contained"
                         uppercase={false}
                     >Agendar Agora</Button>
