@@ -1,14 +1,30 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import { Text, Box, Touchable, Cover, Title, Button } from '../../styles';
+import { Text, Box, Touchable, Cover, Button } from '../../styles';
+import moment from 'moment';
 
-const servico = () => {
+import { useDispatch } from 'react-redux';
+import { updateAgendamento, filterAgenda } from '../../store/modules/salao/actions';
+
+const Servico = ({servicos}) => {
+
+    const dispatch = useDispatch();
+
     return (
-        <Touchable height="100px" hasPadding background="light" align="center">
+        <Touchable
+            height="100px"
+            hasPadding
+            background="light"
+            align="center"
+            onPress={() => {
+                dispatch(updateAgendamento({servicoId: servicos._id}));
+                dispatch(filterAgenda());
+            }}
+        >
             <Cover image="https://salaovirtual.org/wp-content/uploads/2022/02/Corte-no-ombro.jpg"/>
             <Box direction="column">
-                <Text bold color="dark">Corte de cabelo</Text>
-                <Text small>R$ 60 • 30 mins</Text>
+                <Text bold color="dark">{servicos?.titulo}</Text>
+                <Text small>R$ {servicos?.preco} • {moment(servicos?.duracao).format('HH:mm')} mins</Text>
             </Box>
             <Box>
                 <Button
@@ -22,4 +38,4 @@ const servico = () => {
     );
 };
 
-export default servico;
+export default Servico;

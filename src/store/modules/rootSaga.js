@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { all } from 'redux-saga/effects';
 
 import salao from '../modules/salao/sagas';

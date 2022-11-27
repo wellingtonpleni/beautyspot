@@ -1,5 +1,6 @@
+/* eslint-disable prettier/prettier */
 export default {
-    salaoId: '609310a1002ab333d1ae1716',
-    clienteId: '60946ad8e400c50be68dc904',
-    bucketUrl: 'https://salao-na-mao-dev.s'
-}
+    salaoId: '63769360ed9be3cea684043d',
+    clienteId: '6382aae97b92ddbbfb3e13b7',
+    bucketUrl: '',
+};
