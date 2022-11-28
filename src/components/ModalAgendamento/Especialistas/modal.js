@@ -45,7 +45,7 @@ const EspecialistasModal = ({form, colaboradores, agendamento, servicos, colabor
                                 spacing="10px 0 0 0"
                                 direction="column"
                                 align="center"
-                                width={(Dimensions.get("screen").width - 100) / 4}
+                                width={(Dimensions.get('screen').width - 100) / 4}
                                 onPress={() => {
                                     dispatch(updateAgendamento({colaboradorId: colaborador._id}));
                                     dispatch(updateForm({modalEspecialista: false}));
