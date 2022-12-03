@@ -12,7 +12,9 @@ import { ActivityIndicator } from 'react-native';
 const Preload = () => {
 
     const navigation = useNavigation();
-    navigation.navigate('Login');
+    setTimeout(() => {
+        navigation.navigate('Login');
+    }, 3000);
 
     return (
         <View style={styles.container}>
